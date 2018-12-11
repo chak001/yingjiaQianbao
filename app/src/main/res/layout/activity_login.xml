@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10">
+
+    <TextView
+        android:id="@+id/net_status"
+        android:text="@string/net_problem"
+        android:gravity="center"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:background="@color/md_red_300"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ImageView
+        android:id="@+id/usericon"
+        android:textSize="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/user_defaulticon"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <include layout="@layout/layout_login" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="或"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:id="@+id/point"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageView
+            android:layout_toLeftOf="@id/point"
+            android:id="@+id/qq_login"
+            android:src="@mipmap/qq_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <ImageView
+            android:id="@+id/weixin_login"
+            android:layout_toRightOf="@id/point"
+            android:src="@mipmap/weixin_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|bottom"
+        android:padding="10dp"
+        android:text="@string/protocal" />
+</LinearLayout>

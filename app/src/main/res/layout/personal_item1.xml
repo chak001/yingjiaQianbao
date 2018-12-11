@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <nlc.zcqb.baselibrary.baseview.view.TitleEditview
+        android:id="@+id/edit_name"
+        app:title="@string/na"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </nlc.zcqb.baselibrary.baseview.view.TitleEditview>
+
+    <nlc.zcqb.baselibrary.baseview.view.TitleEditview
+        android:id="@+id/edit_nickname"
+        app:title="@string/nick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </nlc.zcqb.baselibrary.baseview.view.TitleEditview>
+
+    <nlc.zcqb.baselibrary.baseview.view.TitleEditview
+        android:id="@+id/edit_telnum"
+        app:title="@string/tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </nlc.zcqb.baselibrary.baseview.view.TitleEditview>
+
+
+    <nlc.zcqb.baselibrary.baseview.view.TitleEditview
+        android:id="@+id/edit_cardid"
+        app:title="@string/id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </nlc.zcqb.baselibrary.baseview.view.TitleEditview>
+
+
+    <nlc.zcqb.baselibrary.baseview.view.ChooseTextview
+        android:id="@+id/marry"
+        app:title="@string/hunying"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </nlc.zcqb.baselibrary.baseview.view.ChooseTextview>
+
+    <nlc.zcqb.baselibrary.baseview.view.ChooseTextview
+        android:id="@+id/culture"
+        app:title="@string/wenhua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </nlc.zcqb.baselibrary.baseview.view.ChooseTextview>
+
+</LinearLayout>

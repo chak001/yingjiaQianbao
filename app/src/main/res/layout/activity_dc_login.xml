@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_titlebar"/>
+
+
+    <com.example.customview.tabmenu.TabsMenu
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:id="@+id/tabs_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.example.customview.tabmenu.TabsMenu>
+
+
+    <android.support.v4.view.ViewPager
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:id="@+id/Login_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="185dp">
+
+    </android.support.v4.view.ViewPager>
+
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkbox"
+        android:layout_gravity="center_horizontal"
+        android:checked="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/checkbotton"
+        android:layout_marginTop="14dp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/roundcorner_blue"
+        android:text="@string/login"
+        android:layout_width="314dp"
+        android:layout_height="38dp" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_marginTop="14dp"
+        android:text="@string/register"
+        android:padding="10dp"
+        android:textColor="@color/dot_color"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

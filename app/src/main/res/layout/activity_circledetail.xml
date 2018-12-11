@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/layout_edit_evaluate"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/teachmenu">
+        <TextView
+            android:text="@string/comment"
+            android:id="@+id/team_singlechat_id_send"
+            android:padding="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/main_checked_txt"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="5dp"/>
+        <EditText
+            android:layout_marginLeft="50px"
+            android:id="@+id/team_singlechat_id_edit"
+            android:hint="请说点什么吧..."
+            android:gravity="center_vertical"
+            android:textSize="13dp"
+            android:textColorHint="@color/hintcolor"
+            android:textColor="@color/linecolor"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/team_singlechat_id_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/video_fragment"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
+
+            <com.android.tedcoder.wkvideoplayer.view.SuperVideoPlayer
+                android:id="@+id/mSuperVideoPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+            <ImageView
+                android:id="@+id/videoimage"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="170dp" />
+            <ImageView
+                android:id="@+id/cover_view"
+                android:background="@color/transparentblack"
+                android:layout_width="match_parent"
+                android:layout_height="170dp" />
+
+            <ImageView
+                android:id="@+id/play_icon"
+                android:src="@mipmap/icon_play"
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+    </FrameLayout>
+</FrameLayout>

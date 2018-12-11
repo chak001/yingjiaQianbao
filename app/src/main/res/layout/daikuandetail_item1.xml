@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:src="@mipmap/titlebar_bg"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="164dp" />
+
+        <FrameLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="42dp">
+
+                <ImageView
+                    android:id="@+id/back_action"
+                    android:visibility="gone"
+                    android:layout_marginLeft="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/back"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp" />
+                <TextView
+                    android:id="@+id/title_name"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/content_wrapper"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="71dp"
+            android:layout_width="337dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="13dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:id="@+id/wrap_user"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_marginLeft="12dp"
+                                    android:id="@+id/user_icon"
+                                    android:scaleType="centerCrop"
+                                    android:src="@mipmap/company_icon"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp" />
+
+                                <RelativeLayout
+                                    android:layout_marginTop="1dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_toRightOf="@+id/user_icon"
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="48dp">
+                                        <TextView
+                                            android:id="@+id/nick_name"
+                                            android:text="借贷宝"
+                                            android:textSize="16dp"
+                                            android:textColor="@color/match_normal_tv"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                        <TextView
+                                            android:id="@+id/discribetion"
+                                            android:textSize="13dp"
+                                            android:layout_alignParentBottom="true"
+                                            android:text="@string/defaultdesc"
+                                            android:textColor="@color/hintcolor"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="12dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="48dp">
+
+                                        <ImageView
+                                            android:id="@+id/favorite"
+                                            android:layout_gravity="right"
+                                            android:src="@mipmap/shoucang"
+                                            android:layout_marginBottom="10dp"
+                                            android:layout_width="21dp"
+                                            android:layout_height="21dp" />
+
+                                        <TextView
+                                            android:textSize="11dp"
+                                            android:id="@+id/peplenum"
+                                            android:textColor="@color/hintcolor"
+                                            android:text="243人已贷"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:weightSum="2"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="57dp"
+                            android:id="@+id/choose_wrapper"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="bottom">
+
+                                <RelativeLayout
+                                    android:id="@+id/left_func"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+                                        <TextView
+                                            android:textSize="11dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:text="@string/jiedai_jine"
+                                            android:textColor="@color/hintcolor" />
+
+                                        <TextView
+                                            android:id="@+id/totalnum"
+                                            android:textSize="18dp"
+                                            android:layout_alignParentBottom="true"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:textColor="@color/dot_color" />
+
+
+                                </RelativeLayout>
+
+                                <View
+                                    android:background="@color/linecolor"
+                                    android:layout_width="1dp"
+                                    android:layout_height="30dp"/>
+
+                                <RelativeLayout
+                                    android:id="@+id/right_func"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:gravity="center"
+                                    android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:id="@+id/deadline"
+                                            android:textSize="18dp"
+                                            android:layout_alignParentBottom="true"
+                                            android:layout_centerHorizontal="true"
+                                            android:textColor="@color/dot_color"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                        <TextView
+                                            android:textSize="11dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:text="@string/huankuan_qixian"
+                                            android:textColor="@color/hintcolor" />
+                                </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            android:background="@color/blue_botton"
+                            android:layout_width="match_parent"
+                            android:padding="10dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/linearLayout"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="bottom">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                        <TextView
+                                            android:id="@+id/huandai"
+                                            android:textSize="11dp"
+                                            android:text="2天"
+                                            android:layout_centerHorizontal="true"
+                                            android:textColor="@color/white"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+                                        <TextView
+                                            android:textSize="11dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/huandai"
+                                            android:layout_centerHorizontal="true"
+                                            android:text="每月还款（元）"
+                                            android:textColor="@color/hintcolor" />
+                                </RelativeLayout>
+
+                                <View
+                                    android:background="@color/linecolor"
+                                    android:layout_width="1dp"
+                                    android:layout_height="30dp"/>
+
+                                <RelativeLayout
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:id="@+id/shijian"
+                                            android:textSize="11dp"
+                                            android:text="2天"
+
+                                            android:layout_centerHorizontal="true"
+                                            android:textColor="@color/white"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+
+                                        <TextView
+                                            android:textSize="11dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/shijian"
+                                            android:layout_centerHorizontal="true"
+                                            android:text="@string/feature2"
+                                            android:textColor="@color/hintcolor" />
+                                </RelativeLayout>
+                                <View
+                                    android:background="@color/linecolor"
+                                    android:layout_width="1dp"
+                                    android:layout_height="30dp"/>
+
+                                <RelativeLayout
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content">
+
+                                        <TextView
+                                            android:id="@+id/lilv"
+                                            android:textSize="11dp"
+                                            android:text="0.03%"
+
+                                            android:layout_centerHorizontal="true"
+                                            android:textColor="@color/white"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content" />
+                                        <TextView
+                                            android:textSize="11dp"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/lilv"
+                                            android:layout_centerHorizontal="true"
+                                            android:text="@string/feature3"
+                                            android:textColor="@color/hintcolor" />
+                                </RelativeLayout>
+                        </LinearLayout>
+                </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+</FrameLayout>

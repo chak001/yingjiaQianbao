@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootview"
+    android:layout_width="match_parent"
+    android:layout_height="236dp">
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:src="@mipmap/titlebar_bg"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="164dp" />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="42dp">
+
+        <ImageView
+            android:id="@+id/back_action"
+            android:visibility="gone"
+            android:src="@mipmap/back"
+            android:layout_width="21dp"
+            android:layout_height="21dp" />
+        <TextView
+            android:id="@+id/title_name"
+            android:textColor="@color/white"
+            android:text="@string/fourthtitle"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:orientation="vertical"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_width="337dp"
+        android:layout_height="141dp">
+
+        <RelativeLayout
+            android:id="@+id/wrap_user"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="68dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginLeft="12dp"
+                android:id="@+id/user_icon"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/default_icon"
+                android:layout_width="33dp"
+                android:layout_height="33dp" />
+
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/user_icon"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/nick_name"
+                    android:text="@string/defaultname"
+                    android:textColor="@color/match_normal_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/discribetion"
+                    android:text="@string/defaultdesc"
+                    android:textColor="@color/menu_grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            
+            <ImageView
+                android:src="@mipmap/enter"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="12dp"
+                android:layout_width="21dp"
+                android:layout_height="21dp" />
+           
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:id="@+id/linearLayout"
+            android:gravity="center_vertical"
+            android:layout_gravity="bottom">
+
+            <RelativeLayout
+                android:id="@+id/favorite_wrap"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/favorite"
+                    android:text="@string/favorate"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/match_normal_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <View
+                android:background="@color/linecolor"
+                android:layout_width="1dp"
+                android:layout_height="30dp"/>
+
+            <RelativeLayout
+                android:id="@+id/history_wrap"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/history"
+                    android:text="@string/history"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/match_normal_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>

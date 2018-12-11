@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootview"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content">
+
+
+    <FrameLayout
+        android:id="@+id/sure"
+        android:background="@mipmap/bg_updatedialog"
+        android:layout_width="682px"
+        android:layout_height="854px" >
+
+
+        <TextView
+            android:id="@+id/version"
+            android:textSize="26px"
+            android:text="V1.2.1"
+            android:layout_marginLeft="439px"
+            android:layout_marginTop="203px"
+            android:textColor="@color/match_normal_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/update_content"
+            android:layout_marginTop="340px"
+            android:layout_marginBottom="200px"
+            android:layout_marginLeft="50px"
+            android:lineSpacingExtra="10px"
+            android:layout_marginRight="50px"
+            android:text="你好，你的当前版本过低，请及时更新！！！"
+            android:gravity="left"
+            android:textColor="@color/match_normal_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:id="@+id/choice"
+            android:text="立刻安装"
+            android:layout_marginTop="690px"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textColor="@color/match_normal_tv"
+            android:layout_width="300px"
+            android:layout_height="70px" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_marginTop="105px"
+        android:src="@mipmap/delete"
+        android:layout_width="100px"
+        android:layout_height="100px" />
+
+</LinearLayout>

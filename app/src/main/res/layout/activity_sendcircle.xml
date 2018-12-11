@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+        <EditText
+            android:padding="10dp"
+            android:id="@+id/text_context"
+            android:background="@null"
+            android:gravity="left|top"
+            android:hint="@string/hinttext"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleview_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/flag"
+                    android:layout_centerInParent="true"
+                    android:layout_width="50dp"
+                    android:layout_height="0dp"/>
+
+                <Button
+                    android:id="@+id/clear"
+                    android:text="@string/clear"
+                    android:layout_toLeftOf="@id/flag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_toRightOf="@id/flag"
+                    android:text="@string/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+        </RelativeLayout>
+</LinearLayout>

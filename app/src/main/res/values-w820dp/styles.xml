@@ -1,0 +1,309 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base application theme. -->
+
+    <style name="ImageTranslucentTheme" parent="AppTheme"/>
+    <style name="TranslucentTheme" parent="AppTheme"/>
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/teachmenu</item>
+
+        <item name="colorAccent">@color/perfectinfo_notice_pink</item>
+    </style>
+
+    <style name="AppTheme" parent="@style/BaseAppTheme">
+        <item name="android:listDivider">@drawable/albumdivider</item>
+    </style>
+    <style name="ToolBarWithNavigationBack">
+        <item name="navigationIcon">@drawable/icon_back</item>
+    </style>
+    
+    <style name="ToorBarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="colorAccent">@color/main_checked_txt</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="mProgress_circle">
+        <item name="android:indeterminateDrawable">@drawable/progressbar_circle</item>
+        <item name="android:minWidth">25dp</item>
+        <item name="android:minHeight">25dp</item>
+        <item name="android:maxWidth">60dp</item>
+        <item name="android:maxHeight">60dp</item>
+    </style>
+
+
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced-->
+    <!--by AppBaseTheme from res/values-vXX/styles.xml on newer devices.-->
+    <!--&ndash;&gt;-->
+    <!--<style name="AppBaseTheme" parent="android:Theme.Light">-->
+    <!--&lt;!&ndash;-->
+    <!--Theme customizations available in newer API levels can go in-->
+    <!--res/values-vXX/styles.xml, while customizations related to-->
+    <!--backward-compatibility can go-->
+    <!--&ndash;&gt;-->
+    <!--</style>-->
+
+    <!--&lt;!&ndash; Application theme. &ndash;&gt;-->
+    <!--<style name="AppTheme" parent="AppBaseTheme">-->
+    <!--&lt;!&ndash; All customizations that are NOT specific to a particular API-level can go here. &ndash;&gt;-->
+    <!--</style>-->
+
+
+
+    <style name="customtitlebarstyle" parent="android:Theme">
+        <item name="android:windowTitleSize">@dimen/title_height</item>
+        <item name="android:windowTitleBackgroundStyle">@style/customtitlebarstyle</item>
+    </style>
+
+    <style name="layouttitlestyle" parent="android:Theme">
+
+        <item name="android:paddingLeft">@dimen/title_padding</item>
+        <item name="android:paddingRight">@dimen/title_padding</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/teachmenu</item>
+        <item name="android:layout_height">@dimen/title_height</item>
+        <item name="android:layout_width">fill_parent</item>
+    </style>
+
+    <style name="ttitlestyle" parent="android:Theme">
+
+        <item name="android:paddingLeft">@dimen/title_padding</item>
+        <item name="android:paddingRight">@dimen/title_padding</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/teachmenu</item>
+        <item name="android:layout_height">@dimen/title_height</item>
+        <item name="android:layout_width">fill_parent</item>
+    </style>
+
+    <style name="searchtitlestyle" parent="android:Theme">
+
+        <item name="android:paddingLeft">@dimen/title_padding</item>
+        <item name="android:paddingRight">@dimen/title_padding</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_height">@dimen/title_height</item>
+        <item name="android:layout_width">fill_parent</item>
+    </style>
+
+    <style name="homettitlestyle" parent="android:Theme">
+        <item name="android:paddingLeft">@dimen/title_padding</item>
+        <item name="android:paddingRight">@dimen/title_padding</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_height">@dimen/title_height</item>
+        <item name="android:layout_width">fill_parent</item>
+    </style>
+
+    <style name="homettitlestyle_v2" parent="android:Theme">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_height">@dimen/homme_title_height</item>
+        <item name="android:layout_width">fill_parent</item>
+    </style>
+
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:background="@drawable/shape_register_makesure_btn"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:text="绑定"-->
+    <!--android:textSize="54px"-->
+    <style name="RegisterMakeSureBtnStyle">
+
+        <item name="android:layout_marginTop">42px</item>
+        <item name="android:layout_width">884px</item>
+        <item name="android:layout_height">120px</item>
+        <item name="android:background">@drawable/shape_register_makesure_btn</item>
+        <item name="android:textSize">@dimen/login_layout_text_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="ProtolGrayStyle">
+        <!--android:textSize="40px"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/protol_txt_size</item>
+        <item name="android:textColor">@color/protol_gray</item>
+    </style>
+    <style name="ProtolYellowStyle">
+        <!--android:textSize="40px"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/protol_txt_size</item>
+        <item name="android:textColor">@color/main_checked_txt</item>
+    </style>
+    <style name="TeachingLibTabStyle">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--
+        <style name="editlayoutStyle">
+            <item name="android:layout_width">match_parent</item>
+            <item name="android:layout_height">wrap_content</item>
+            <item name="android:focusable">true</item>
+            <item name="android:focusableInTouchMode">true</item>
+            <item name="android:orientation">horizontal</item>
+            <item name="android:padding">5dp</item>
+            <item name="android:layout_marginTop">@dimen/edit_marginTop</item>
+        </style>
+    -->
+    <style name="editlayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">65px</item>
+        <item name="android:layout_marginTop">@dimen/edit_marginTop</item>
+    </style>
+    <style name="LoginEditStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/login_layout_text_size</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textColorHint">@color/hinttext</item>
+    </style>
+    <style name="LoginTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/login_layout_text_size</item>
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+    <style name="InfoEditStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/info_text_size</item>
+        <item name="android:textColorHint">@color/text_gray</item>
+
+    </style>
+    <style name="InfoTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/info_text_size</item>
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+    <!--<style name="InfoNormalEditStyle">-->
+    <!--<item name="android:layout_width">match_parent</item>-->
+    <!--<item name="android:layout_height">wrap_content</item>-->
+    <!--<item name="android:background">@null</item>-->
+    <!--<item name="android:textSize">@dimen/info_text_size</item>-->
+    <!--</style>-->
+    <style name="LoginBtnStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">@dimen/login_layout_text_size</item>
+        <item name="android:paddingBottom">18px</item>
+        <item name="android:paddingTop">18px</item>
+    </style>
+
+    <style name="HomepageTableStlye">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/tablelayout_paddingBottom</item>
+        <item name="android:paddingLeft">@dimen/tablelayout_paddingLeftorRight</item>
+        <item name="android:paddingRight">@dimen/tablelayout_paddingLeftorRight</item>
+        <item name="android:shrinkColumns">*</item>
+
+    </style>
+
+    <style name="VerticalLineStyle">
+    <item name="android:layout_width">6px</item>
+    <item name="android:layout_height">@dimen/sixty_height</item>
+    <item name="android:layout_gravity">center_vertical</item>
+    <item name="android:background">@color/main_checked_txt</item>
+
+    </style>
+
+    <style name="main_tab_bottom">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">2.0dip</item>
+        <!-- <item name="android:paddingTop">5.0dip</item> -->
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:singleLine">true</item>
+        <!-- <item name="android:drawablePadding">3.0dip</item> -->
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="LoadingProgressbar">
+        <item name="android:indeterminateDrawable">@drawable/loading_progressbar</item>
+    </style>
+    <style name="MemberBigText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">60px</item>
+        <item name="android:textSize">39px</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">#333333</item>
+
+    </style>
+    <style name="MemberText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">35px</item>
+        <item name="android:textSize">39px</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#333333</item>
+
+    </style>
+    <style name="MemberImage">
+        <item name="android:layout_width">59px</item>
+        <item name="android:layout_height">59px</item>
+        <item name="android:layout_marginTop">35px</item>
+        <item name="android:layout_marginLeft">50px</item>
+        <item name="android:layout_marginRight">50px</item>
+
+    </style>
+
+    <style name="MemberLiner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">110px</item>
+        <item name="android:orientation">vertical</item>
+
+    </style>
+
+    <style name="MyRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/layer_myratingbar</item>
+        <item name="android:minHeight">42px</item>
+        <item name="android:maxHeight">42px</item>
+    </style>
+
+    <style name="RegistDetailTv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">48px</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <!--认证-->
+    <style name="authentication_main_text">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/roundcorner_gray</item>
+        <item name="android:textColor">@color/match_normal_tv</item>
+        <item name="android:textSize">48px</item>
+        <item name="android:layout_width">926px</item>
+        <item name="android:layout_height">132px</item>
+        <item name="android:layout_marginTop">97px</item>
+    </style>
+</resources>

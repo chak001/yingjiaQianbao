@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:text="自定义"
+            android:id="@+id/raido1"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/radio2"
+            android:text="实验室"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/radio3"
+            android:text="寝室"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/radio4"
+            android:text="家里"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/ip_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.example.customview.adview.AdViewPager
+        android:id="@+id/ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.example.customview.adview.AdViewPager>
+
+
+    <com.example.customview.validateview.ValidateView
+        android:id="@+id/validate_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.example.customview.validateview.ValidateView>
+
+    <com.example.customview.filtermenu.FilterMenu
+        android:id="@+id/filter_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.example.customview.filtermenu.FilterMenu>
+
+    <com.example.customview.tabmenu.TabsMenu
+        android:id="@+id/tabs_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.example.customview.tabmenu.TabsMenu>
+
+</LinearLayout>

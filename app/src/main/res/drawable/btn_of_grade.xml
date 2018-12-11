@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/all">
+        <shape android:shape="rectangle">
+            <corners android:radius="10px"/>
+            <solid android:color="#00ffffff"/>
+            <stroke android:color="@color/main_checked_txt" android:width="3px"/>
+        </shape>
+    </item>
+</layer-list>

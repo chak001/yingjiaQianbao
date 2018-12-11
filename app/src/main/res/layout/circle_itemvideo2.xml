@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootview"
+    android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <View
+        android:id="@+id/line"
+        android:background="@color/line"
+        android:layout_width="match_parent"
+        android:layout_height="15px"/>
+
+
+    <include layout="@layout/layout_usertitle"/>
+
+    <LinearLayout
+        android:id="@+id/layout_images"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_context"
+            android:textSize="13dp"
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+         <FrameLayout
+             android:id="@+id/video_capture"
+             android:background="@color/blue"
+             android:layout_width="match_parent"
+             android:layout_height="170dp">
+
+
+         </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menuBar"
+        android:weightSum="3"
+        android:background="@color/line"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/sharenum"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/commentnum"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/praisenum"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_titlebar"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="62dp"
+        android:id="@+id/filter_wrap"
+        android:paddingBottom="10dp"
+        android:background="@color/bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.customview.filtermenu.FilterMenu
+            android:id="@+id/filter_view"
+            android:paddingBottom="10dp"
+            android:paddingTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.example.customview.filtermenu.FilterMenu>
+
+        <com.example.customview.tabmenu.TabsMenu
+            android:id="@+id/tabs_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.example.customview.tabmenu.TabsMenu>
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/search_edittext"
+        android:visibility="gone"
+        android:layout_below="@+id/filter_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical"
+        android:layout_below="@+id/search_edittext"
+        android:id="@+id/swiperefreshlayout">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    
+    <ImageButton
+        android:id="@+id/add"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="50dp"
+        android:src="@mipmap/icons_addmusic"
+        android:background="@drawable/green_circle"
+        android:visibility="gone"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+</RelativeLayout>

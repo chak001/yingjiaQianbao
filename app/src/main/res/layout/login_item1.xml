@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:layout_marginTop="70dp"
+        android:id="@+id/edit_username"
+        android:hint="@string/username"
+        android:textColor="@color/match_normal_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <com.example.customview.validateview.ValidateView
+        android:id="@+id/edit_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

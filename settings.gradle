@@ -1,0 +1,2 @@
+include ':app', ':wkvideoplayer', ':customview', 'percentview', ':waImageClip'
+//, ':imageloader', ':photoView-master',

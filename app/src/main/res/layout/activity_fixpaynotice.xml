@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootview"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_titlebar"/>
+
+    <LinearLayout
+        android:layout_marginTop="84dp"
+        android:id="@+id/msg_wrap"
+        android:orientation="vertical"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <nlc.zcqb.baselibrary.baseview.view.TitleEditview
+            android:id="@+id/ed1"
+            app:title="@string/biaoti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <nlc.zcqb.baselibrary.baseview.view.TitleEditview
+            android:id="@+id/ed2"
+            app:title="@string/jiedaijine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <nlc.zcqb.baselibrary.baseview.view.TitleEditview
+            android:id="@+id/ed3"
+            app:title="@string/fenqiqixian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <nlc.zcqb.baselibrary.baseview.view.TitleEditview
+            android:id="@+id/ed4"
+            app:title="@string/meiqihuankuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <nlc.zcqb.baselibrary.baseview.view.ChooseTextview
+            android:id="@+id/te1"
+            app:title="@string/shoucihuankuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </nlc.zcqb.baselibrary.baseview.view.ChooseTextview>
+
+        <nlc.zcqb.baselibrary.baseview.view.ChooseTextview
+            android:id="@+id/te2"
+            app:title="@string/zhouqi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </nlc.zcqb.baselibrary.baseview.view.ChooseTextview>
+        <nlc.zcqb.baselibrary.baseview.view.ChooseTextview
+            android:id="@+id/te3"
+            app:title="@string/tiqiantianshu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </nlc.zcqb.baselibrary.baseview.view.ChooseTextview>
+        <nlc.zcqb.baselibrary.baseview.view.ChooseTextview
+            android:id="@+id/te4"
+            app:title="@string/tixinshijian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </nlc.zcqb.baselibrary.baseview.view.ChooseTextview>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/create"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/roundcorner_blue"
+        android:text="@string/baocun"
+        android:layout_above="@+id/delete"
+        android:layout_width="314dp"
+        android:layout_height="38dp" />
+
+    <TextView
+        android:id="@+id/delete"
+        android:textColor="@color/delete"
+        android:textSize="12dp"
+        android:text="@string/shanchu"
+        android:visibility="visible"
+        android:layout_marginBottom="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/filename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filename"
+        android:layout_marginTop="10dp"
+        android:max="100"
+        android:progress="0" />
+
+    <Button
+        android:id="@+id/downloadButton"
+        android:onClick="begin"
+        android:text="开始"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/pause_button"
+        android:text="暂停"
+        android:onClick="pause"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/downloadButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/continue_button"
+        android:text="继续"
+        android:layout_marginTop="10dp"
+        android:onClick="resume"
+        android:layout_below="@id/pause_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:onClick="delete"
+        android:layout_marginTop="10dp"
+        android:text="删除文件"
+        android:layout_below="@id/continue_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

@@ -1,0 +1,340 @@
+<resources>
+    <string name="app_name">盈家钱包</string>
+    <string name="buttontext">换肤</string>
+    <string name="net_problem">网络异常！</string>
+    <string name="loadpatch">加载补丁</string>
+    <string name="killprocess">杀死进程</string>
+    <string name="bug">bug需要修复</string>
+    <string name="fixed">修复完成</string>
+    <string name="fix">修改</string>
+    <string name="choosefile"> 选择文件</string>
+    <string name="submit"> 提交</string>
+    <string name="comment"> 评论</string>
+    <string name="clear"> 清空</string>
+    <string name="hinttext"> 写下你的心情！</string>
+
+    <string name="login">登录</string>
+    <string name="username">手机号</string>
+    <string name="password">密码</string>
+    <string name="newpassword">新密码</string>
+    <string name="surepassword">确认密码</string>
+    <string name="forget">忘记密码</string>
+    <string name="register">注册</string>
+
+    <string name="menu1"> 动态</string>
+    <string name="menu2"> 朋友</string>
+    <string name="menu3"> 聊天</string>
+    <string name="menu4"> 我</string>
+
+    <string name="fans">粉丝</string>
+    <string name="focused">关注</string>
+
+    <string name="func1">我的收藏</string>
+    <string name="func3">空间消息</string>
+    <string name="func2">我的空间</string>
+    <string name="func4">设置</string>
+
+    <string name="nickname">昵称</string>
+    <string name="describe">简述</string>
+    <string name="backgroundImage">背景</string>
+    <string name="iconImage">头像</string>
+    <string name="qq">QQ号</string>
+    <string name="weixin">微信号</string>
+    <string name="phonenum">手机号</string>
+
+    <string name="protocal">登陆默认同意《用户许可协议》《隐私条款》</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+
+
+    <!--贷超-->
+    <string name="defaultdesc">补全资料贷款成功率提高5倍</string>
+    <string name="defaultname">用户名</string>
+    <string name="rightlogin">立即登录</string>
+    <string name="rightdesc">登录后才能借贷哦~</string>
+
+    <!--我的页面功能-->
+    <string name="person_msg">个人资料</string>
+    <string name="pay_notice">还款提醒</string>
+    <string name="message">消息</string>
+    <string name="truthcheck">信用诊断</string>
+    <string name="customservice">客服</string>
+    <string name="friends">邀请好友</string>
+    <string name="setting">设置</string>
+    <string name="favorate">收藏</string>
+    <string name="history">最近浏览</string>
+
+
+    <!--标题-->
+    <string name="Firsttitle">首页</string>
+    <string name="secondtitle">借贷</string>
+    <string name="thirdtitle">攻略</string>
+    <string name="fourthtitle">个人</string>
+    <!--副标题-->
+    <string name="sub_title1">公告</string>
+    <string name="sub_title2">平台推荐</string>
+    <string name="sub_title3">贷款攻略</string>
+    <string name="sub_title4">查看更多</string>
+
+    <!--产品特性-->
+    <string name="jiedai_jine">借贷金额</string>
+    <string name="huankuan_qixian">还款期限</string>
+
+    <string name="feature1">可贷金额（元）</string>
+    <string name="feature2">最快下款</string>
+    <string name="feature3">参考日利息</string>
+
+    <!--贷款详情标题-->
+    <string name="daikuanxiangqing">贷款详情</string>
+    <string name="shenqingzige">申请资格</string>
+    <string name="chanpingjieshao">产品介绍</string>
+    <string name="shenqingdaikuan">申请贷款</string>
+    <string name="lianxikefu">联系客服</string>
+    <string name="daikuanedu">贷款额度</string>
+    <string name="choose_jine">借贷金额</string>
+    <string name="choose_riqi">还款期限</string>
+    <string name="gongluexiangqing">攻略详情</string>
+
+    <!--信用诊断标题-->
+    <string name="xinyongzhenduan">信用诊断</string>
+    <string name="name">姓名</string>
+    <string name="cardid">身份证</string>
+    <string name="telnum">手机</string>
+    <string name="code">验证码</string>
+    <string name="xinyongduijie">信用机构对接</string>
+    <string name="shujuduibi">网贷数据对比</string>
+    <string name="heimingdan">命中黑名单</string>
+    <string name="tips">需要支付5元检测费用</string>
+    <string name="jiance">立即检测</string>
+    <string name="zhenduanresult">诊断结果</string>
+
+    <!--登陆-->
+    <string name="codelogin">手机验证码</string>
+    <string name="pwdlogin">账号密码</string>
+    <string name="fixpwd">修改密码</string>
+
+    <!--还款提醒-->
+    <string name="huankuantixin">还款提醒</string>
+    <string name="huankuantips">您还没有还款计划哦~</string>
+    <string name="xinjianjihua">新建还款计划</string>
+    <string name="baocun">保存</string>
+    <string name="xinjian">新建</string>
+    <string name="shanchu">删除</string>
+    <string name="biaoti">提醒标题：</string>
+    <string name="jiedaijine">借款金额（元）：</string>
+    <string name="fenqiqixian">分期期限（月）：</string>
+    <string name="meiqihuankuan">每期还款（元）：</string>
+    <string name="shoucihuankuan">首次还款日：</string>
+    <string name="zhouqi">提醒周期：</string>
+    <string name="tiqiantianshu">提前天数：</string>
+    <string name="tixinshijian">提醒时间：</string>
+
+    <!--个人资料-->
+    <string name="na">姓名：</string>
+    <string name="id">身份证：</string>
+    <string name="tel">手机：</string>
+    <string name="nick">昵称：</string>
+
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="next">下一页</string>
+
+    <string name="personaltitle1">个人信息</string>
+    <string name="personaltitle2">身份信息</string>
+    <string name="personaltitle3">资产信息</string>
+
+    <string name="gerenziliao">个人资料</string>
+    <string name="hunying">婚姻状况：</string>
+    <string name="wenhua">文化程度：</string>
+
+    <string name="shenfen">身份：</string>
+    <string name="shouruxingshi">收入形式：</string>
+    <string name="yueshouru">月收入（元）：</string>
+    <string name="suozaigongsi">当前所在公司：</string>
+    <string name="gongjiji">是否连续6个月以上缴纳公积金：</string>
+    <string name="shebao">是否连续6个月以上缴纳社保：</string>
+    <string name="words">当前资料完整度</string>
+
+    <string name="xinyongka">是否有信用卡：</string>
+    <string name="taobao">是否有淘宝账号：</string>
+    <string name="fangchan">名下房产：</string>
+    <string name="chechan">名下车产：</string>
+    <string name="daikuanjilu">是否有成功贷款记录：</string>
+    <string name="xinyong">信用情况：</string>
+    <string name="personal_tip">您填写的信息将做加密处理，仅为产品推荐时做数据参考！</string>
+
+    <string name="test">只需要手机号，匹配全网最适合您的下款口子</string>
+    <string name="protocalA">我已阅读</string>
+    <string name="protocalB">《盈家钱包用户协议》</string>
+
+    <!--设置页面-->
+    <string name="fun1">清除缓存</string>
+    <string name="fun2">修改密码</string>
+    <string name="fun3">关于我们</string>
+    <string name="fun4">当前版本</string>
+    <string name="fun5">退出当前账号</string>
+
+
+    <!--微信-->
+    <string name="app_back">返回</string>
+    <string name="app_ok">确定</string>
+    <string name="app_cancel">取消</string>
+    <string name="app_continue">继续</string>
+    <string name="app_tip">提示</string>
+    <string name="app_send">发送</string>
+    <string name="app_set">设置</string>
+    <string name="app_save">保存</string>
+    <string name="app_delete">删除</string>
+    <string name="app_nextstep">下一步</string>
+    <string name="app_prevstep">上一步</string>
+    <string name="app_finish">完成</string>
+    <string name="app_find">查找</string>
+    <string name="app_edit">编辑</string>
+
+    <!-- applet -->
+    <string name="applet_secimg_title">填写验证码</string>
+    <string name="applet_secimg_change">换一张图片</string>
+    <string name="applet_seccode_tip">验证码不能为空</string>
+    <string name="applet_seccode_fail_tip">验证码错误，请重新输入</string>
+
+    <!-- verify -->
+    <string name="verify_password_null_tip">密码不能为空，请输入密码</string>
+
+    <!-- format -->
+    <string name="fmt_date">M月d日</string>
+    <string name="fmt_longdate">yyyy年M月d日</string>
+    <string name="fmt_datetime" formatted="false">M月d日 %skk:mm</string>
+    <string name="fmt_patime">kk:mm</string>
+    <string name="fmt_longtime" formatted="false">yyyy年M月d日 %skk:mm</string>
+    <string name="fmt_in60min" formatted="false">%d分钟前</string>
+    <string name="fmt_justnow">1分钟内</string>
+    <string name="fmt_dawn">凌晨</string>
+    <string name="fmt_morning">早上</string>
+    <string name="fmt_noon">中午</string>
+    <string name="fmt_afternoon">下午</string>
+    <string name="fmt_evening">晚上</string>
+    <string name="fmt_pre_yesterday">昨天</string>
+    <string name="fmt_iap_err" formatted="false">网络连接不可用，请稍候重试</string>
+
+    <string name="hello">Hello World, SDKSampleActivity!</string>
+    <string name="app_share">分享</string>
+
+    <string name="enter">这是SDK_Sample的入口界面</string>
+    <string name="reg">将该app注册到微信</string>
+    <string name="goto_send">跳转到发消息界面</string>
+    <string name="launch_wx">启动微信</string>
+    <string name="check_timeline_supported">检查是否支持发送到朋友圈</string>
+
+    <string name="send_to_wx_title">发送到微信</string>
+    <string name="get_from_wx_title">从微信接收</string>
+    <string name="show_from_wx_title">显示微信请求的消息</string>
+
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unsupported">不支持错误</string>
+    <string name="errcode_unknown">发送返回</string>
+
+    <!-- WXMediaMessage -->
+    <string name="send">发送到微信</string>
+    <string name="receive">从微信接收</string>
+
+    <string name="is_timeline">是否分享到朋友圈</string>
+    <string name="send_text">发送文本</string>
+    <string name="send_text_default">这段文字发送自微信SDK示例程序</string>
+
+    <string name="send_img">发送图片</string>
+    <string-array name="send_img_item">
+        <item>发送图片的二进制数据</item>
+        <item>发送图片的本地路径</item>
+        <!-- <item>发送图片的URL</item> -->
+    </string-array>
+    <string name="send_img_file_not_exist">文件不存在</string>
+
+    <string name="send_pic">发送照片</string>
+
+    <string name="send_music">发送音乐</string>
+    <string-array name="send_music_item">
+        <item>发送音乐url</item>
+        <item>发送低带宽音乐url</item>
+    </string-array>
+
+    <string name="send_video">发送视频</string>
+    <string-array name="send_video_item">
+        <item>发送视频url</item>
+        <item>发送低带宽视频url</item>
+    </string-array>
+
+    <string name="send_webpage">发送网页</string>
+    <string-array name="send_webpage_item">
+        <item>发送网页url</item>
+    </string-array>
+    <string name="send_appbrand">发送小程序</string>
+    <string-array name="send_appbrand_item">
+        <item>发送小程序</item>
+    </string-array>
+    <string name="send_appdata">发送app消息</string>
+    <string-array name="send_appdata_item">
+        <item>发送app文件本地路径</item>
+        <item>发送app二进制数据</item>
+        <item>发送无附件的app</item>
+    </string-array>
+
+    <string name="send_emoji">发送表情消息</string>
+    <string-array name="send_emoji_item">
+        <item>发送表情本地路径</item>
+        <item>发送表情二进制数据</item>
+    </string-array>
+
+    <string-array name="send_emoji_item_format">
+        <item>发送GIF图片</item>
+        <item>发送非GIF图片</item>
+    </string-array>
+
+    <string name="share_text_to_weixin">回应文本到微信</string>
+    <string name="share_text_default">这段文字回应自微信SDK示例程序</string>
+    <string name="share_url_to_weixin">回应URL到微信</string>
+    <string name="share_pic_to_weixin">回应图片到微信</string>
+    <string name="share_music_to_weixin">回应音乐到微信</string>
+    <string name="share_video_to_weixin">回应视频到微信</string>
+    <string name="share_appdata_to_weixin">回应app消息到微信</string>
+
+    <string name="register_as_weixin_app_sender">注册微信事件发送器</string>
+    <string name="get_token_from_weixin">获取微信访问Token</string>
+    <string name="unregister_from_weixin">从微信反注册</string>
+
+    <string name="show_from_wx_tip">这个界面用于显示微信向第三方app请求显示的信息</string>
+
+    <string name="scan_qrcode_login">扫码登录</string>
+    <string name="auth">微信登录</string>
+    <string name="cancel_auth">取消登录</string>
+
+    <string name="qrcode_wait_for_scan">扫描二维码登录</string>
+    <string name="qrcode_scanned">点击确认登录</string>
+
+    <string name="result_succ" formatted="false">登录成功，code=%s</string>
+    <string name="result_normal_err">登录失败，一般错误</string>
+    <string name="result_network_err">登录失败，网络错误</string>
+    <string name="result_json_decode_err">json解码失败</string>
+    <string name="result_user_cancel">用户取消</string>
+    <string name="result_timeout_err">登录失败，超时错误</string>
+
+    <string name="target_scene">目标场景</string>
+    <string name="target_scene_session">会话</string>
+    <string name="target_scene_timeline">朋友圈</string>
+    <string name="target_scene_favorite">收藏</string>
+
+</resources>

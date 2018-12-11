@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RadioGroup
+        android:id="@+id/xinyongka"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:textSize="15dp"
+            android:text="@string/xinyongka"
+            android:textColor="@color/match_normal_tv"
+            android:layout_weight="8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/g3_1"
+            android:text="@string/yes"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/g3_2"
+            android:text="@string/no"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+    <View
+        android:background="@color/dialog_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <RadioGroup
+        android:id="@+id/taobao"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:textSize="15dp"
+            android:textColor="@color/match_normal_tv"
+            android:text="@string/taobao"
+            android:layout_weight="8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/g4_1"
+            android:text="@string/yes"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/g4_2"
+            android:text="@string/no"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+    <View
+        android:background="@color/dialog_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <nlc.zcqb.baselibrary.baseview.view.ChooseTextview
+        android:id="@+id/fangchan"
+        app:title="@string/fangchan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </nlc.zcqb.baselibrary.baseview.view.ChooseTextview>
+
+    <nlc.zcqb.baselibrary.baseview.view.ChooseTextview
+        android:id="@+id/chechan"
+        app:title="@string/chechan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </nlc.zcqb.baselibrary.baseview.view.ChooseTextview>
+
+
+    <RadioGroup
+        android:id="@+id/daikuan"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:textSize="15dp"
+            android:text="@string/daikuanjilu"
+            android:textColor="@color/match_normal_tv"
+            android:layout_weight="8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/g5_1"
+            android:text="@string/yes"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/g5_2"
+            android:text="@string/no"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+    <View
+        android:background="@color/dialog_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+    <nlc.zcqb.baselibrary.baseview.view.ChooseTextview
+        android:id="@+id/xinyong"
+        app:title="@string/xinyong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </nlc.zcqb.baselibrary.baseview.view.ChooseTextview>
+
+</LinearLayout>
