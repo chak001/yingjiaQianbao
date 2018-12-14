@@ -53,7 +53,10 @@ public class MyApplication extends Application {
         }
         mUser.setDeviceId(getDeviceId());
         screenParams = getScreenParams();
-        CachePath = getApp().getBaseContext().getCacheDir().getParent() + File.separator + "file" + File.separator;
+        CachePath =this.getExternalCacheDir().getParent() + File.separator + "files" + File.separator;
+        if (!new File(CachePath).exists()){
+            new File(CachePath).mkdirs();
+        }
     }
 
 

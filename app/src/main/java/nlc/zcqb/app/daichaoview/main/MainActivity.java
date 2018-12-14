@@ -1,9 +1,15 @@
 package nlc.zcqb.app.daichaoview.main;
 
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -13,13 +19,17 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.waImageClip.activity.MediaPickHelper;
 import com.example.waImageClip.activity.ResultCallback;
+import com.google.gson.Gson;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import ncl.zcqb.app.R;
 import nlc.zcqb.app.application.MyApplication;
@@ -30,12 +40,16 @@ import nlc.zcqb.app.daichaoview.common.UserIdBean;
 import nlc.zcqb.app.daichaoview.fourth.bean.PersonBean;
 import nlc.zcqb.app.daichaoview.fourth.view.PersonalActivity;
 import nlc.zcqb.app.daichaoview.main.bean.IconBean;
+import nlc.zcqb.app.daichaoview.main.bean.versionBean;
+import nlc.zcqb.app.daichaoview.service.UpdateService;
 import nlc.zcqb.app.event.CommandEvent;
 import nlc.zcqb.app.event.progressEvent;
 import nlc.zcqb.app.util.ARouter;
 import nlc.zcqb.app.util.DC;
-import nlc.zcqb.baselibrary.basemodel.netRequest.UploadService;
+import nlc.zcqb.app.daichaoview.service.UploadService;
+import nlc.zcqb.app.util.PermissionUtil;
 import nlc.zcqb.baselibrary.basemodel.sharepreferenceRequest.UserPreferencesUtil;
+import nlc.zcqb.baselibrary.util.AppVersionUtil;
 import nlc.zcqb.baselibrary.util.helper.EasyPermissonHelper;
 import nlc.zcqb.baselibrary.util.helper.RequestPermissonHelper;
 import nlc.zcqb.baselibrary.baseview.BaseActivity;
@@ -46,12 +60,15 @@ import nlc.zcqb.app.daichaoview.third.fragment.Thirdfragment;
 import nlc.zcqb.baselibrary.util.Constant;
 import nlc.zcqb.baselibrary.util.Utils;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import static nlc.zcqb.app.daichaoview.fourth.view.PersonalActivity.GETUSERINFO;
 import static nlc.zcqb.app.daichaoview.fourth.view.PersonalActivity.UPLOADICON;
 import static nlc.zcqb.app.event.CommandEvent.CHANGEPAGE;
+import static nlc.zcqb.app.event.CommandEvent.DOWN_APP;
 import static nlc.zcqb.app.event.CommandEvent.UPLOAD_ICON;
+import static nlc.zcqb.app.util.PermissionUtil.requestNotifyUseCode;
 
 
 /**
@@ -72,9 +89,10 @@ public class MainActivity extends BaseActivity implements BaseActivity.NetListen
     private int currentposition=0;
     private String[] text=new String[]{"首页","平台","攻略","个人"};
     private CommonSimplePresenter commonSimplePresenter;
-    private final static int PROTOCALTYPE=111,FIXUSERICON=112;
+    private final static int PROTOCALTYPE=111,FIXUSERICON=112,GETAPPVERSION=1114;
     private BeanPresenter presenter;
     private CommonSimplePresenter iconpresenter;
+    public final static int requestNotifyCode= 124;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,14 +120,17 @@ public class MainActivity extends BaseActivity implements BaseActivity.NetListen
             setMenuStatus(i,false);
         }
         setMenuStatus(0,true);
+        requestNotifyPermission();
     }
 
     @Override
     public void InitOthers() {
+        versionBean versionbean=new versionBean(AppVersionUtil.getVerName(this));
         iconpresenter=new CommonSimplePresenter(this);
         presenter=new BeanPresenter<PersonBean>(this);
         commonSimplePresenter=new CommonSimplePresenter(this);
         commonSimplePresenter.getCommonData(PROTOCALTYPE,null,DC.protocol,"content");
+        commonSimplePresenter.getCommonData(GETAPPVERSION,versionbean,DC.getversion,null);
         addPresenter(presenter);
         addPresenter(commonSimplePresenter);
 
@@ -272,6 +293,11 @@ public class MainActivity extends BaseActivity implements BaseActivity.NetListen
             }else {
                 Toast("还没登陆！");
             }
+        }else if (progress.getProgress()==100 && progress.getACTION().equals(DOWN_APP)){
+            Toast("最新app下载完成！");
+            File file=new File(progress.getAbsolutepath());
+            if (file.exists())
+                AppVersionUtil.installApp(file,this);
         }
     }
 
@@ -333,8 +359,47 @@ public class MainActivity extends BaseActivity implements BaseActivity.NetListen
             fragment.refreshHead();
         }else if (type==FIXUSERICON ){
             EventBus.getDefault().post(new CommandEvent(CommandEvent.LOGIN_SUCCESS,getRunningActivityName()));
+        }else if (type==GETAPPVERSION){
+            try {
+                JSONObject jsonObject= new JSONObject((String) o);
+                int code=  jsonObject.getInt("code");
+                if (code==100){
+                    String temp= jsonObject.getString("data");
+                    JSONObject object= new JSONObject(temp);
+                    String downUrl= object.getString("and");
+                    String edition=object.getString("edition");
+                    showUpdateDiaLog(edition,downUrl);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
     }
+
+
+    public void requestNotifyPermission(){
+        if (!PermissionUtil.isNotificationEnabled(this)){
+            Toast.makeText(this,"请打开通知栏权限！",Toast.LENGTH_SHORT).show();
+            PermissionUtil.gotoNotificationSetting( this,requestNotifyCode);
+            return  ;
+        }
+    }
+
+    public void showUpdateDiaLog(String edition, final String url){
+        requestNotifyPermission();
+        AlertDialog.Builder builder  = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("app更新" ) ;
+        builder.setMessage("有最新的"+edition+"版本app，是否现在下载？" ) ;
+        builder.setPositiveButton("是", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                UpdateService.startDownLoad(MainActivity.this,url,"");
+            }
+        });
+        builder.setNegativeButton("否", null);
+        builder.show();
+    }
+
 
     @Override
     public void failure(Object o, int type) {
@@ -344,6 +409,16 @@ public class MainActivity extends BaseActivity implements BaseActivity.NetListen
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode== requestNotifyCode){
+            if (resultCode==Activity.RESULT_CANCELED){
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                    if (!PermissionUtil.isNotificationEnabled(this)){
+                        PermissionUtil.gotoNotificationSetting(this, requestNotifyCode);
+                        return;
+                    }
+                }
+            }
+        }
         MediaPickHelper.handleActivityResult(this, requestCode, resultCode, data, new ResultCallback() {
             @Override
             public void success(String path) {
@@ -356,4 +431,5 @@ public class MainActivity extends BaseActivity implements BaseActivity.NetListen
             }
         });
     }
+
 }

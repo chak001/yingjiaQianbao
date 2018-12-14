@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,7 @@ import nlc.zcqb.app.daichaoview.common.CommonView;
 import nlc.zcqb.app.daichaoview.common.IdBean;
 import nlc.zcqb.app.daichaoview.common.UserIdBean;
 import nlc.zcqb.app.daichaoview.second.adapter.DaiKuanDetailAdapter;
+import nlc.zcqb.app.daichaoview.second.bean.ApplyBean;
 import nlc.zcqb.app.daichaoview.second.bean.MoneyBean;
 import nlc.zcqb.app.daichaoview.second.bean.NumberBean;
 import nlc.zcqb.app.daichaoview.second.bean.PingTaiDetailBean;
@@ -43,8 +45,9 @@ import nlc.zcqb.baselibrary.util.URL;
 
 public class DaiKuanDetailActivity extends BaseListActivity implements CommonView,View.OnClickListener{
     private TextView left_text,right_text;
+    private RelativeLayout leftWrap;
     private CommonPresenter<PingTaiDetailBean> detailresenter;
-    private CommonSimplePresenter getQQPresenter;
+    private CommonSimplePresenter SPresenter;
     private CommonPresenter<MoneyBean> moneyPresenter;
     private CommonPresenter<NumberBean>  numPresenter;
     public final static int DETAILTYPE=10;
@@ -53,6 +56,7 @@ public class DaiKuanDetailActivity extends BaseListActivity implements CommonVie
     public final static int GETMONEYLIST=22;
     public final static int GETNUMYLIST=23;
     public final static int ADDHISTORY=24;
+    public final static int ADDAPPLY=27;
 
     private String pintTaiId;
     public final static String KEY_ID="KEY_ID";
@@ -73,11 +77,12 @@ public class DaiKuanDetailActivity extends BaseListActivity implements CommonVie
     public void initTitle() {
 
         left_text=(TextView) findViewById(R.id.left_text);
+        leftWrap=(RelativeLayout) findViewById(R.id.left_wrapper);
         Drawable drawable=this.getResources().getDrawable(R.mipmap.lianxikefu);
         drawable.setBounds(0,0, util.dip2px(this,18),util.dip2px(this,18));//第一0是距左边距离，第二0是距上边距离，40分别是长宽
         left_text.setCompoundDrawables(drawable,null,null,null);//只放左边
 
-        left_text.setOnClickListener(this);
+        leftWrap.setOnClickListener(this);
         right_text=(TextView) findViewById(R.id.right_text);
         right_text.setOnClickListener(this);
     }
@@ -95,14 +100,14 @@ public class DaiKuanDetailActivity extends BaseListActivity implements CommonVie
         //收藏相关的presenter
         collectionPresenter=new CommonSimplePresenter(this);
         isCollectedPresenter=new CommonSimplePresenter(this);
-        getQQPresenter=new CommonSimplePresenter(this);
+        SPresenter=new CommonSimplePresenter(this);
         numPresenter=new CommonPresenter<NumberBean>(this){};
         moneyPresenter=new CommonPresenter<MoneyBean>(this){};
 
         addPresenter(collectionPresenter);
         addPresenter(isCollectedPresenter);
         addPresenter(detailresenter);
-        addPresenter(getQQPresenter);
+        addPresenter(SPresenter);
         addPresenter(numPresenter);
         addPresenter(moneyPresenter);
 
@@ -111,7 +116,7 @@ public class DaiKuanDetailActivity extends BaseListActivity implements CommonVie
         }
         idBean.setId(pintTaiId);
         detailresenter.getCommonData(DETAILTYPE, idBean,DC.daikuanxiangqing,false);
-        getQQPresenter.getCommonData(GETQQ,null,DC.kefuqq,"num");
+        SPresenter.getCommonData(GETQQ,null,DC.kefuqq,"num");
         numPresenter.getCommonData(GETNUMYLIST,idBean,DC.daikuanqixian,true);
         moneyPresenter.getCommonData(GETMONEYLIST,idBean,DC.daikuanjine,true);
         String  userid=MyApplication.mUser.getUser_id();
@@ -134,7 +139,7 @@ public class DaiKuanDetailActivity extends BaseListActivity implements CommonVie
         startLoadingAnimation();
         idBean.setId(pintTaiId);
         detailresenter.getCommonData(DETAILTYPE, idBean,DC.daikuanxiangqing,false);
-        getQQPresenter.getCommonData(GETQQ,null,DC.kefuqq,"num");
+        SPresenter.getCommonData(GETQQ,null,DC.kefuqq,"num");
     }
 
     @Override
@@ -163,6 +168,10 @@ public class DaiKuanDetailActivity extends BaseListActivity implements CommonVie
             if ("100".equals( o)){
                 Log.e("ADDHISTORY","成功添加历史！");
             }
+        }else if (type==ADDAPPLY){
+            if ("100".equals( o)){
+                Log.e("ADDAPPLY","成功添加申请记录！");
+            }
         }
         stopLoadingAnimation();
     }
@@ -176,7 +185,7 @@ public class DaiKuanDetailActivity extends BaseListActivity implements CommonVie
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.left_text:
+            case R.id.left_wrapper:
                 ARouter.jumpToQQ(this, DC.tempQQ);
 //                if (kefuQQ.length()>5) {
 //                    ARouter.jumpToQQ(this, DC.tempQQ);
@@ -185,6 +194,12 @@ public class DaiKuanDetailActivity extends BaseListActivity implements CommonVie
 //                }
                 break;
             case R.id.right_text:
+                if (MyApplication.mUser.isLogin() && MyApplication.mUser.getUser_id()!=null){
+                    ApplyBean bean=((DaiKuanDetailAdapter)getAdapter()).getApplyDetail();
+                    bean.setUsid(MyApplication.mUser.getUser_id());
+                    SPresenter.getCommonData(ADDAPPLY,bean,DC.daikuanjilu,"code");
+                }
+
                 right_text.setEnabled(false);
                 ARouter.jumpIn(this,bundle, WebViewActivity.class);
                 handler.postDelayed(new Runnable() {

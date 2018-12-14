@@ -35,6 +35,7 @@
         android:layout_height="50dp" />
 
     <RelativeLayout
+        android:id="@+id/left_wrapper"
         android:orientation="horizontal"
         android:background="@color/white"
         android:layout_alignParentBottom="true"

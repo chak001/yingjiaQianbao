@@ -26,12 +26,13 @@ public class DC {
     public final static String homebg=serverIp+"/obBack";
     public final static String tuijianpingtailist=serverIp+"/reLoan";
     public final static String gonggao=serverIp+"/obNotice";
+    public final static String getversion=serverIp+"/edition";
 
     //收藏和历史纪录操作
     public final static String shoucang=serverIp+"/chaColl";
     public final static String shifoushoucang=serverIp+"/seeColl";
     public final static String tianjiajilu=serverIp+"/addBorwse";
-
+    public final static String daikuanjilu=serverIp+"/addApply";
     //贷款
     public final static String pingtailiebiao=serverIp+"/loanList";
     public final static String xuhuanjine=serverIp+"/payMoney";

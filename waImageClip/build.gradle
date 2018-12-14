@@ -1,13 +1,13 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 26
     buildToolsVersion '26.0.2'
 
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
 
@@ -40,8 +40,8 @@ repositories{
 dependencies {
     implementation (name: 'cropper-1.0.1', ext: 'aar')
     implementation files('libs/fastjson-1.1.60.android.jar')
-    implementation 'com.android.support:appcompat-v7:25.0.1'
+    implementation 'com.android.support:appcompat-v7:26.0.1'
     // https://mvnrepository.com/artifact/com.android.support/support-v4
-    implementation group: 'com.android.support', name: 'support-v4', version: '25.0.1'
+    implementation group: 'com.android.support', name: 'support-v4', version: '26.0.1'
 
 }

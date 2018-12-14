@@ -198,12 +198,13 @@
 
                                         <TextView
                                             android:id="@+id/huandai"
-                                            android:textSize="11dp"
-                                            android:text="2天"
-                                            android:layout_centerHorizontal="true"
-                                            android:textColor="@color/white"
                                             android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content" />
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentTop="true"
+                                            android:layout_centerHorizontal="true"
+                                            android:text="2天"
+                                            android:textColor="@color/white"
+                                            android:textSize="11dp" />
                                         <TextView
                                             android:textSize="11dp"
                                             android:layout_width="wrap_content"

@@ -177,7 +177,7 @@ public class util {
             throws FileNotFoundException, IOException {
 
         File newFile = new File(path);
-        Uri inputUri = FileProvider.getUriForFile( context, "ncl.zcqb.app", newFile);
+        Uri inputUri = FileProvider.getUriForFile( context, context.getPackageName()+".fileProvider", newFile);
         InputStream input = context.getContentResolver().openInputStream(inputUri);
         Bitmap bitmap = BitmapFactory.decodeStream(input);
         input.close();

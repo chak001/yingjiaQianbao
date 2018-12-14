@@ -20,6 +20,7 @@ import nlc.zcqb.app.daichaoview.common.CommonView;
 import nlc.zcqb.app.daichaoview.login.LoginActivity;
 import nlc.zcqb.app.daichaoview.second.adapter.viewholder.DKDViewHolder1;
 import nlc.zcqb.app.daichaoview.second.adapter.viewholder.DKDViewHolder2;
+import nlc.zcqb.app.daichaoview.second.bean.ApplyBean;
 import nlc.zcqb.app.daichaoview.second.bean.MoneyBean;
 import nlc.zcqb.app.daichaoview.second.bean.NumberBean;
 import nlc.zcqb.app.daichaoview.second.bean.PayMoneyQueryBean;
@@ -241,5 +242,10 @@ public class DaiKuanDetailAdapter extends BaseTypeAdapter implements CommonView{
     @Override
     public void failure(Object o, int type) {
         Toast.makeText(mContext,""+o,Toast.LENGTH_SHORT).show();
+    }
+
+    public ApplyBean getApplyDetail(){
+        ApplyBean bean=new ApplyBean(totalMoney,totalTerm,detailBean.getLoan_id());
+        return bean;
     }
 }

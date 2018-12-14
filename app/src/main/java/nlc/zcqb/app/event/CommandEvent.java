@@ -11,6 +11,7 @@ public class CommandEvent {
     public final static String CHANGEPAGE ="VIEWPAGE_CHANGE";
     public final static String LOGIN_SUCCESS ="LOGIN_SUCCESS";
     public final static String UPLOAD_ICON ="UPLOAD_ICON";
+    public final static String DOWN_APP ="DOWN_APP";
     String Type;
     String command;
 
