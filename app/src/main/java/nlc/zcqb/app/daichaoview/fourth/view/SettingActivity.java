@@ -19,6 +19,7 @@ import nlc.zcqb.app.util.ARouter;
 import nlc.zcqb.app.util.DC;
 import nlc.zcqb.baselibrary.baseview.BaseActivity;
 import nlc.zcqb.baselibrary.baseview.WebViewActivity;
+import nlc.zcqb.baselibrary.util.AppVersionUtil;
 
 /**
  * Created by lvqiu on 2018/10/14.
@@ -30,6 +31,7 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
     private CommonSimplePresenter aboutPresenter;
     public final static int ABLOUTTYPE=25;
     private String aboutUrl="";
+    private TextView version;
 
     public void initTitle() {
         viewHolder =new TitleBarViewHolder(this);
@@ -69,6 +71,9 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
         about.setOnClickListener(this);
         logout.setOnClickListener(this);
         clear.setOnClickListener(this);
+
+        version=findViewById(R.id.version);
+        version.setText("V"+ AppVersionUtil.getVerName(this));
     }
 
     @Override
