@@ -11,7 +11,7 @@ import ncl.zcqb.app.R;
 import nlc.zcqb.app.daichaoview.common.CommonView;
 import nlc.zcqb.app.daichaoview.third.adapter.ThirdAdapter;
 import nlc.zcqb.app.daichaoview.third.presenter.GongLuePresenter;
-import nlc.zcqb.app.event.ClickEvent;
+import nlc.zcqb.baselibrary.event.ClickEvent;
 import nlc.zcqb.baselibrary.baseview.BaseListFragment;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;

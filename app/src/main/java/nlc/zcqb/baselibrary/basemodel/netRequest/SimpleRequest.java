@@ -4,7 +4,6 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 
-import org.greenrobot.eventbus.EventBus;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -12,7 +11,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import nlc.zcqb.app.event.CommandEvent;
 import nlc.zcqb.baselibrary.basemodel.BaseRequest;
 import nlc.zcqb.baselibrary.util.Constant;
 import nlc.zcqb.baselibrary.util.ReflectionUtils;

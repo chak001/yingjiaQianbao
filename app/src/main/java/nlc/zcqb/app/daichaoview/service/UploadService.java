@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 
 import nlc.zcqb.app.application.MyApplication;
 import nlc.zcqb.app.application.User.User;
-import nlc.zcqb.app.event.progressEvent;
+import nlc.zcqb.baselibrary.event.progressEvent;
 import nlc.zcqb.app.util.DC;
 import nlc.zcqb.baselibrary.basemodel.bean.FileResult;
 import okhttp3.Call;

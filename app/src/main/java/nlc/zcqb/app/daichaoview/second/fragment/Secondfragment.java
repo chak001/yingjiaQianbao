@@ -17,7 +17,7 @@ import nlc.zcqb.app.daichaoview.second.adapter.SecondAdapter;
 import nlc.zcqb.app.daichaoview.second.bean.PingTaiQueryBean;
 import nlc.zcqb.app.daichaoview.second.bean.TypeBean;
 import nlc.zcqb.app.daichaoview.second.presenter.PingTaiQueryPresenter;
-import nlc.zcqb.app.event.ClickEvent;
+import nlc.zcqb.baselibrary.event.ClickEvent;
 import nlc.zcqb.app.util.DC;
 import nlc.zcqb.baselibrary.baseview.BaseListFragment;
 import org.greenrobot.eventbus.Subscribe;

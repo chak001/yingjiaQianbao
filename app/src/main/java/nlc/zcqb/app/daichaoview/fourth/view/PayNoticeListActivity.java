@@ -2,7 +2,6 @@ package nlc.zcqb.app.daichaoview.fourth.view;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -22,8 +21,7 @@ import nlc.zcqb.app.daichaoview.fourth.adapter.NoticeAdapter;
 import nlc.zcqb.app.daichaoview.fourth.bean.NoticeBean;
 import nlc.zcqb.app.daichaoview.fourth.bean.QueryBean;
 import nlc.zcqb.app.daichaoview.login.viewholder.TitleBarViewHolder;
-import nlc.zcqb.app.event.CommandEvent;
-import nlc.zcqb.app.event.DataSynEvent;
+import nlc.zcqb.baselibrary.event.CommandEvent;
 import nlc.zcqb.app.util.ARouter;
 import nlc.zcqb.app.util.DC;
 import nlc.zcqb.baselibrary.baseview.BaseListActivity;

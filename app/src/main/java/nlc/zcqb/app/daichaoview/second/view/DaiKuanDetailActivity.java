@@ -15,8 +15,6 @@ import com.example.customview.util;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-import java.util.ArrayList;
-
 import ncl.zcqb.app.R;
 import nlc.zcqb.app.application.MyApplication;
 import nlc.zcqb.app.daichaoview.common.CommonPresenter;
@@ -29,15 +27,13 @@ import nlc.zcqb.app.daichaoview.second.bean.ApplyBean;
 import nlc.zcqb.app.daichaoview.second.bean.MoneyBean;
 import nlc.zcqb.app.daichaoview.second.bean.NumberBean;
 import nlc.zcqb.app.daichaoview.second.bean.PingTaiDetailBean;
-import nlc.zcqb.app.event.CommandEvent;
-import nlc.zcqb.app.event.DataSynEvent;
+import nlc.zcqb.baselibrary.event.CommandEvent;
 import nlc.zcqb.app.util.ARouter;
 import nlc.zcqb.app.util.DC;
 import nlc.zcqb.baselibrary.baseview.BaseListActivity;
 import nlc.zcqb.baselibrary.baseview.BaseTypeAdapter;
 import nlc.zcqb.baselibrary.baseview.WebViewActivity;
 import nlc.zcqb.baselibrary.util.StringUtils;
-import nlc.zcqb.baselibrary.util.URL;
 
 /**
  * Created by lvqiu on 2018/10/14.
@@ -159,7 +155,11 @@ public class DaiKuanDetailActivity extends BaseListActivity implements CommonVie
         }else if (type==ISCOLLECTION){
             getAdapter().TypeFactory(o,ISCOLLECTION, BaseTypeAdapter.REFRESH);
         }else if (type==GETQQ){
-            kefuQQ= (String) o;
+            if (StringUtils.isNumeric((String) o)){
+                kefuQQ= (String) o;
+            }else {
+                kefuQQ= DC.tempQQ;
+            }
         }else if (type==GETMONEYLIST){
             getAdapter().TypeFactory(o,GETMONEYLIST,BaseTypeAdapter.REFRESH);
         }else if (type==GETNUMYLIST){
@@ -186,7 +186,7 @@ public class DaiKuanDetailActivity extends BaseListActivity implements CommonVie
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.left_wrapper:
-                ARouter.jumpToQQ(this, DC.tempQQ);
+                ARouter.jumpToQQ(this, kefuQQ);
 //                if (kefuQQ.length()>5) {
 //                    ARouter.jumpToQQ(this, DC.tempQQ);
 //                }else {

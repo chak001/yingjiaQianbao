@@ -26,7 +26,7 @@ import nlc.zcqb.app.daichaoview.common.UserIdBean;
 import nlc.zcqb.app.daichaoview.fourth.adapter.viewholder.PersonViewHolder1;
 import nlc.zcqb.app.daichaoview.fourth.adapter.viewholder.PersonViewHolder2;
 import nlc.zcqb.app.daichaoview.fourth.adapter.viewholder.PersonViewHolder3;
-import nlc.zcqb.app.event.CommandEvent;
+import nlc.zcqb.baselibrary.event.CommandEvent;
 import nlc.zcqb.baselibrary.callback.UpdateView;
 import nlc.zcqb.app.daichaoview.fourth.bean.PersonBean;
 import nlc.zcqb.app.daichaoview.fourth.bean.UploadPersonBean;

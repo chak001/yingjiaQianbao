@@ -26,7 +26,7 @@ import nlc.zcqb.app.daichaoview.second.bean.NumberBean;
 import nlc.zcqb.app.daichaoview.second.bean.PayMoneyQueryBean;
 import nlc.zcqb.app.daichaoview.second.bean.PingTaiDetailBean;
 import nlc.zcqb.app.daichaoview.second.view.DaiKuanDetailActivity;
-import nlc.zcqb.app.event.CommandEvent;
+import nlc.zcqb.baselibrary.event.CommandEvent;
 import nlc.zcqb.app.util.ARouter;
 import nlc.zcqb.app.util.DC;
 import nlc.zcqb.baselibrary.basemodel.netRequest.HttpUtil;
@@ -34,7 +34,6 @@ import nlc.zcqb.baselibrary.baseview.BaseActivity;
 import nlc.zcqb.baselibrary.baseview.BaseTypeAdapter;
 import nlc.zcqb.baselibrary.callback.ClickCallback;
 import nlc.zcqb.baselibrary.util.StringUtils;
-import nlc.zcqb.baselibrary.util.Utils;
 
 import static nlc.zcqb.app.daichaoview.second.view.DaiKuanDetailActivity.COLLECTION;
 import static nlc.zcqb.app.daichaoview.second.view.DaiKuanDetailActivity.GETMONEYLIST;

@@ -513,7 +513,9 @@ public class StringUtils {
         }
         /*判断字符串是否仅为数字:*/
         public static boolean isNumeric(String str){
-
+            if (isNullOrEmpty(str)){
+                return false;
+            }
             Pattern pattern = Pattern.compile("[0-9]*");
             return pattern.matcher(str).matches();
         }

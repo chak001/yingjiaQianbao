@@ -28,7 +28,7 @@ import nlc.zcqb.app.daichaoview.common.GetCodePresenter;
 import nlc.zcqb.app.daichaoview.login.presenter.LoginPresenter;
 import nlc.zcqb.app.daichaoview.login.viewcallback.LoginView;
 import nlc.zcqb.app.daichaoview.login.viewholder.TitleBarViewHolder;
-import nlc.zcqb.app.event.CommandEvent;
+import nlc.zcqb.baselibrary.event.CommandEvent;
 import nlc.zcqb.app.util.ARouter;
 import nlc.zcqb.app.util.CheckBoxUtil;
 import nlc.zcqb.baselibrary.baseview.BaseActivity;

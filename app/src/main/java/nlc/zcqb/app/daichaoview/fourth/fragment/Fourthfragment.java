@@ -16,7 +16,9 @@ import nlc.zcqb.app.util.DC;
 import nlc.zcqb.baselibrary.basemodel.sharepreferenceRequest.ObjPreferUtil;
 import nlc.zcqb.baselibrary.baseview.BaseListFragment;
 import nlc.zcqb.app.daichaoview.fourth.adapter.FourthAdapter;
-import nlc.zcqb.app.event.ClickEvent;
+import nlc.zcqb.baselibrary.event.ClickEvent;
+import nlc.zcqb.baselibrary.util.StringUtils;
+
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
@@ -78,9 +80,13 @@ public class Fourthfragment extends BaseListFragment implements CommonView {
 
     @Override
     public void success(Object o, int type) {
-        if (type==GETQQ) {
-            kefuQQ = DC.tempQQ;
-            updateData(o);
+        if (type==GETQQ ) {
+            if (StringUtils.isNumeric((String) o)) {
+                kefuQQ = (String) o;
+            }else {
+                kefuQQ=DC.tempQQ;
+            }
+            updateData(kefuQQ);
         }else if (type==GETSHAREMESSAGE){
             Gson gson=new Gson();
             ShareBean bean= gson.fromJson((String) o,ShareBean.class);

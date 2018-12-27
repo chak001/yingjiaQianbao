@@ -14,7 +14,7 @@ import nlc.zcqb.app.daichaoview.common.CommonSimplePresenter;
 import nlc.zcqb.app.daichaoview.common.CommonView;
 import nlc.zcqb.app.daichaoview.login.FixPwdActivity;
 import nlc.zcqb.app.daichaoview.login.viewholder.TitleBarViewHolder;
-import nlc.zcqb.app.event.CommandEvent;
+import nlc.zcqb.baselibrary.event.CommandEvent;
 import nlc.zcqb.app.util.ARouter;
 import nlc.zcqb.app.util.DC;
 import nlc.zcqb.baselibrary.baseview.BaseActivity;

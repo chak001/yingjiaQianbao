@@ -5,12 +5,10 @@ import android.annotation.TargetApi;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
@@ -20,19 +18,13 @@ import android.util.Log;
 
 import org.greenrobot.eventbus.EventBus;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
 import ncl.zcqb.app.R;
-import nlc.zcqb.app.event.progressEvent;
+import nlc.zcqb.baselibrary.event.progressEvent;
 import nlc.zcqb.baselibrary.basemodel.netRequest.DownloadFileRequest;
 
 import static nlc.zcqb.app.daichaoview.service.UploadService.EXTRA_PATH;
 import static nlc.zcqb.app.daichaoview.service.UploadService.KEY;
-import static nlc.zcqb.app.event.CommandEvent.DOWN_APP;
+import static nlc.zcqb.baselibrary.event.CommandEvent.DOWN_APP;
 import static nlc.zcqb.baselibrary.basemodel.netRequest.DownloadFileRequest.HTTP_SUCCESS;
 
 

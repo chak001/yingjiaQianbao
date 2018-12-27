@@ -17,14 +17,9 @@ import com.bumptech.glide.Glide;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import ncl.zcqb.app.R;
-import nlc.zcqb.app.event.StopLoadingEvent;
-import nlc.zcqb.app.event.ClickEvent;
-import nlc.zcqb.baselibrary.callback.UpdateView;
-import nlc.zcqb.baselibrary.presenter.BasePresenter;
+import nlc.zcqb.baselibrary.event.StopLoadingEvent;
+import nlc.zcqb.baselibrary.event.ClickEvent;
 
 /**
  * Created by lvqiu on 2018/10/13.

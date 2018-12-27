@@ -8,7 +8,7 @@ import android.support.v4.app.Fragment;
 import android.util.Log;
 
 import com.bumptech.glide.Glide;
-import nlc.zcqb.app.event.ClickEvent;
+import nlc.zcqb.baselibrary.event.ClickEvent;
 import nlc.zcqb.baselibrary.presenter.BasePresenter;
 
 import org.greenrobot.eventbus.EventBus;

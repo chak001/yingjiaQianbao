@@ -1,14 +1,12 @@
 package nlc.zcqb.app.daichaoview.first.fragment;
 
 import android.annotation.SuppressLint;
-import android.support.annotation.IntRange;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +16,7 @@ import nlc.zcqb.app.daichaoview.first.adapter.FirstAdapter;
 import nlc.zcqb.app.daichaoview.first.presenter.BulletPresenter;
 import nlc.zcqb.app.daichaoview.first.presenter.RecommendPresenter;
 import nlc.zcqb.app.daichaoview.third.presenter.GongLuePresenter;
-import nlc.zcqb.app.event.ClickEvent;
+import nlc.zcqb.baselibrary.event.ClickEvent;
 import nlc.zcqb.baselibrary.baseview.BaseListFragment;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;

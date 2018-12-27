@@ -1,8 +1,7 @@
 package nlc.zcqb.baselibrary.basemodel.netRequest;
 
 import android.util.Log;
-import nlc.zcqb.app.event.CommandEvent;
-import nlc.zcqb.app.util.DC;
+import nlc.zcqb.baselibrary.event.CommandEvent;
 import nlc.zcqb.baselibrary.basemodel.BaseRequest;
 import nlc.zcqb.baselibrary.util.Constant;
 import com.google.gson.Gson;

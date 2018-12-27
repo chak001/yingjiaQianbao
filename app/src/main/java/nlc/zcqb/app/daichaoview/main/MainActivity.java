@@ -3,13 +3,9 @@ package nlc.zcqb.app.daichaoview.main;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.ApplicationInfo;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -23,7 +19,6 @@ import android.widget.Toast;
 
 import com.example.waImageClip.activity.MediaPickHelper;
 import com.example.waImageClip.activity.ResultCallback;
-import com.google.gson.Gson;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -42,8 +37,8 @@ import nlc.zcqb.app.daichaoview.fourth.view.PersonalActivity;
 import nlc.zcqb.app.daichaoview.main.bean.IconBean;
 import nlc.zcqb.app.daichaoview.main.bean.versionBean;
 import nlc.zcqb.app.daichaoview.service.UpdateService;
-import nlc.zcqb.app.event.CommandEvent;
-import nlc.zcqb.app.event.progressEvent;
+import nlc.zcqb.baselibrary.event.CommandEvent;
+import nlc.zcqb.baselibrary.event.progressEvent;
 import nlc.zcqb.app.util.ARouter;
 import nlc.zcqb.app.util.DC;
 import nlc.zcqb.app.daichaoview.service.UploadService;
@@ -65,10 +60,9 @@ import java.util.ArrayList;
 
 import static nlc.zcqb.app.daichaoview.fourth.view.PersonalActivity.GETUSERINFO;
 import static nlc.zcqb.app.daichaoview.fourth.view.PersonalActivity.UPLOADICON;
-import static nlc.zcqb.app.event.CommandEvent.CHANGEPAGE;
-import static nlc.zcqb.app.event.CommandEvent.DOWN_APP;
-import static nlc.zcqb.app.event.CommandEvent.UPLOAD_ICON;
-import static nlc.zcqb.app.util.PermissionUtil.requestNotifyUseCode;
+import static nlc.zcqb.baselibrary.event.CommandEvent.CHANGEPAGE;
+import static nlc.zcqb.baselibrary.event.CommandEvent.DOWN_APP;
+import static nlc.zcqb.baselibrary.event.CommandEvent.UPLOAD_ICON;
 
 
 /**

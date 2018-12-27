@@ -1,16 +1,12 @@
 package nlc.zcqb.app.daichaoview.fourth.adapter;
 
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.waImageClip.activity.MediaPickHelper;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -25,9 +21,8 @@ import nlc.zcqb.app.daichaoview.fourth.view.PayNoticeListActivity;
 import nlc.zcqb.app.daichaoview.fourth.view.PersonalActivity;
 import nlc.zcqb.app.daichaoview.fourth.view.SettingActivity;
 import nlc.zcqb.app.daichaoview.fourth.view.ShouCangActivity;
-import nlc.zcqb.app.daichaoview.fourth.view.XinYongActivity;
 import nlc.zcqb.app.daichaoview.login.LoginActivity;
-import nlc.zcqb.app.event.CommandEvent;
+import nlc.zcqb.baselibrary.event.CommandEvent;
 import nlc.zcqb.app.util.ARouter;
 import nlc.zcqb.app.util.DC;
 import nlc.zcqb.baselibrary.baseview.BaseTypeAdapter;
@@ -35,8 +30,7 @@ import nlc.zcqb.baselibrary.basemodel.netRequest.HttpUtil;
 import nlc.zcqb.baselibrary.util.StringUtils;
 import nlc.zcqb.wxlibrary.view.SendToWXActivity;
 
-import static nlc.zcqb.app.daichaoview.second.view.DaiKuanDetailActivity.GETQQ;
-import static nlc.zcqb.app.event.CommandEvent.UPLOAD_ICON;
+import static nlc.zcqb.baselibrary.event.CommandEvent.UPLOAD_ICON;
 
 
 /**
@@ -145,7 +139,7 @@ public class FourthAdapter extends BaseTypeAdapter {
             viewHolder2.relativeLayouts[4].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ARouter.jumpToQQ(mContext, DC.tempQQ);
+                    ARouter.jumpToQQ(mContext, QQ);
                 }
             });
             viewHolder2.relativeLayouts[5].setOnClickListener(new View.OnClickListener() {

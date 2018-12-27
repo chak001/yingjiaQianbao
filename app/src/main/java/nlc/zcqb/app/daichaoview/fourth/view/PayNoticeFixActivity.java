@@ -18,8 +18,7 @@ import nlc.zcqb.app.daichaoview.fourth.adapter.viewholder.NoticeDetailViewHolder
 import nlc.zcqb.app.daichaoview.fourth.bean.FixNoticeBean;
 import nlc.zcqb.app.daichaoview.fourth.bean.NoticeBean;
 import nlc.zcqb.app.daichaoview.login.viewholder.TitleBarViewHolder;
-import nlc.zcqb.app.daichaoview.second.view.DaiKuanDetailActivity;
-import nlc.zcqb.app.event.CommandEvent;
+import nlc.zcqb.baselibrary.event.CommandEvent;
 import nlc.zcqb.app.util.DC;
 import nlc.zcqb.baselibrary.baseview.BaseActivity;
 

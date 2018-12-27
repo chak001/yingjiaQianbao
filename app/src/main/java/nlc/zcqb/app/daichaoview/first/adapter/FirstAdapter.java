@@ -23,11 +23,10 @@ import nlc.zcqb.app.daichaoview.first.bean.RecommendBean;
 import nlc.zcqb.app.daichaoview.second.view.DaiKuanDetailActivity;
 import nlc.zcqb.app.daichaoview.third.bean.GongLueItemBean;
 import nlc.zcqb.app.daichaoview.third.view.GonglueDetailActivity;
-import nlc.zcqb.app.event.CommandEvent;
+import nlc.zcqb.baselibrary.event.CommandEvent;
 import nlc.zcqb.app.util.ARouter;
 import nlc.zcqb.baselibrary.basemodel.netRequest.HttpUtil;
 import nlc.zcqb.baselibrary.baseview.BaseTypeAdapter;
-import nlc.zcqb.baselibrary.util.Utils;
 
 import static nlc.zcqb.app.daichaoview.second.view.DaiKuanDetailActivity.KEY_ID;
 import static nlc.zcqb.app.daichaoview.third.fragment.Thirdfragment.GONGLUETYPE;
